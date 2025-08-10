@@ -1,0 +1,57 @@
+/* styles.css - simple polished theme */
+:root{
+  --accent: #4b6cff;
+  --muted: #6c757d;
+  --bg: #fbfcfe;
+  --card-radius: 12px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+body {
+  background: var(--bg);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Navbar */
+.navbar-brand .brand-badge{
+  width:40px;height:40px;border-radius:10px;
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
+  font-size:18px;
+}
+
+/* Hero */
+header { margin-bottom: 0; }
+
+/* Cards */
+.card { border-radius: var(--card-radius); }
+
+/* Outfit sketch box */
+.outfit-sketch { width: 180px; height: 260px; }
+
+/* Timeline item */
+.timeline { border-left: 4px solid rgba(75,108,255,0.12); transition: transform .12s ease; }
+.timeline:hover { transform: translateY(-4px); }
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(180deg, var(--accent), #355bd6);
+  border: none;
+  box-shadow: 0 6px 18px rgba(75,108,255,0.12);
+}
+.btn-outline-secondary { border-radius: 10px; }
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  .outfit-sketch { margin: 0 auto; display:block; }
+  .brand-badge { width:36px;height:36px; }
+  .navbar .nav-link { padding: .5rem .6rem; }
+}
+
+/* Print-friendly adjustments */
+@media print {
+  nav, footer, .btn { display: none !important; }
+  body { background: white; }
+}
